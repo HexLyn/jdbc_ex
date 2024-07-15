@@ -2,6 +2,7 @@ package org.scoula.jdbc_ex.test;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.scoula.jdbc_ex.common.JDBCUtill;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,5 +24,12 @@ public class ConnectionTest {
         Connection conn = DriverManager.getConnection(url, id, passward);
         System.out.println("DB connection established.");
         conn.close();
+    }
+    @Test
+    @DisplayName("load jdbc db. (auto)")
+    public void testConnection2() throws SQLException, ClassNotFoundException {
+        try(Connection conn = JDBCUtill.getConnection()) {
+            System.out.println("DB connection established~");
+        }
     }
 }
