@@ -2,7 +2,7 @@ package org.scoula.jdbc_ex.test;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.scoula.jdbc_ex.common.JDBCUtill;
+import org.scoula.jdbc_ex.todo.common.JDBCUtill;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

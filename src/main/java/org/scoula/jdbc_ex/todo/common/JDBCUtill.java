@@ -1,9 +1,9 @@
-package org.scoula.jdbc_ex.common;
+package org.scoula.jdbc_ex.todo.common;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.Properties;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class JDBCUtill {
 //     static으로 써서 본 java db에서 사용함을 의미.
