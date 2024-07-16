@@ -46,8 +46,11 @@ class UserDaoTest {
     @DisplayName("specific user extract")
     @Order(3)
     void get() throws SQLException {
+//        특정 사용자 정보 조회
+//        해당 값이 없으면 NoSuchElementException 예외 던짐.
         UserVO user = dao.get("ssamz3")
                 .orElseThrow(NoSuchElementException::new);
+//        조회된 사용자 값이 null이 아닌지 확인하는 테스트
         Assertions.assertNotNull(user);
     }
 
@@ -55,6 +58,7 @@ class UserDaoTest {
     @DisplayName("update user info")
     @Order(4)
     void update() throws SQLException {
+//        특정 사용자의 정보 조회하여 수정.
         UserVO user = dao.get("ssamz3")
                 .orElseThrow(NoSuchElementException::new);
         user.setName("쌤즈3");
