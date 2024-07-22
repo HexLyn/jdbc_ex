@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// VO객체 : Value Object, 특정 테이블의 한 행을 매핑하는 클래스.
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

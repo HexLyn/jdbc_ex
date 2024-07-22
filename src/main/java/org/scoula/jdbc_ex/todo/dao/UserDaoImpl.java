@@ -16,6 +16,7 @@ public class UserDaoImpl implements UserDao {
 //    JDBCUtill에서 이미 만들어 놓았으니 가져오기만 하면 된다.
     Connection conn = JDBCUtill.getConnection();
 
+//    USERS 테이블 관련 SQL 명령어.
 //    private으로 SQL명령어를 미리 적어 놓고, 아래에서 넣어주기만 한다.
     private String USER_LIST = "select * from user";
     private String USER_GET = " select * from user where id = ?";
@@ -23,6 +24,7 @@ public class UserDaoImpl implements UserDao {
     private String USER_UPDATE = "update user set name = ?, role = ? where id = ?";
     private String USER_DELETE = "delete from user where id = ?";
 
+//    회원 등록
     @Override
     public int create(UserVO user) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(USER_INSERT)) {

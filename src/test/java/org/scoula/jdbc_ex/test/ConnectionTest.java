@@ -22,14 +22,14 @@ public class ConnectionTest {
 
 //        실제로 db 연결, DriverManager를 사용해 db연결 객체 생성
         Connection conn = DriverManager.getConnection(url, id, passward);
-        System.out.println("DB connection established.");
+        System.out.println("DB connection established.(성공했다는 뜻");
         conn.close();
     }
     @Test
     @DisplayName("load jdbc db. (auto)")
-    public void testConnection2() throws SQLException, ClassNotFoundException {
+    public void testConnection2() throws SQLException {
         try(Connection conn = JDBCUtill.getConnection()) {
-            System.out.println("DB connection established~");
+            System.out.println("DB connection established!!!");
         }
     }
 }
