@@ -11,11 +11,6 @@ repositories {
 
 dependencies {
     implementation 'com.mysql:mysql-connector-j:8.3.0'
-    compileOnly 'org.projectlombok:lombok:1.18.34'
-    annotationProcessor 'org.projectlombok:lombok:1.18.34'
-
-    testCompileOnly('org.projectlombok:lombok:1.18.34')
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 
     //자동으로 추가된 항목.
     testImplementation platform('org.junit:junit-bom:5.10.0')

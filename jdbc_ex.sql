@@ -1,9 +1,9 @@
 use jdbc_ex;
--- users 테이블 있는 경우 삭제.
+-- user 테이블 있는 경우 삭제.
 drop table if exists users;
 drop table if exists user;
 
--- users 테이블 칼럼 생성
+-- user 테이블 칼럼 생성
 create table user (
                        id varchar(12) not null primary key,
                        password varchar(12) not null,
@@ -11,7 +11,7 @@ create table user (
                        role varchar(6) not null
 );
 
--- users 테이블 실제 데이터 입력
+-- user 테이블 실제 데이터 입력
 insert into user (id, password, name, role)
 values('guest', 'guest123', '방문자', 'USER');
 

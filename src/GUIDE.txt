@@ -1,0 +1,32 @@
+1. 데이터 베이스 준비
+CREATE DATABASE jdbc_ex;
+
+2. 사용자 준비
+CREATE USER 'jdbc_ex'@'%' IDENTIFIED BY 'jdbc_ex';
+GRANT ALL PRIVILEGES ON jdbc_ex.* TO 'jdbc_ex'@'%';
+FLUSH PRIVILEGES;
+
+3. 프로젝트 생성
+name : jdbc_ex
+Build System: Maven
+Group Id: org.soula
+
+4.MySQL Connector, Annotation Processing
+
+5. Intellij DataSource기능 설정
+좌상단 +기호 -> Data Source -> MySQL -> MYSQL
+-> User, Password 작성, Name: jdbc_ex@localhost -> test connection
+
+6. 쿼리 실행
+7. 데이터 준비. CREATE TABLE
+
+8.ConnectionTest.java 작성.
+9.application.properties 작성.
+10.JDBCUtil.java 작성
+11.CrudTest.java 작성
+12.UserVO.java 작성
+13.UserDao.java 작성
+14.UserDaoImpl.java 작성
+15.UserDao 클래스 내에서 우클릭 -> Go To -> Test -> Create New Test
+-> Member 전부 포함해서 OK
+16.UserDaoTest 완성.
